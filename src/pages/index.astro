@@ -1,11 +1,511 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/header.astro";
+import Footer from "../components/footer.astro";
+import Heading from "../components/heading.astro";
+import Nav from "../components/navigation.astro";
+import SectionHeader from "../components/section-header.astro";
+import AboutCard from "../components/card-about.astro";
+import Chip from "../components/chip.astro";
+import Talk from "../components/lets-talk.astro";
+import Layout from "../layouts/Layout.astro";
+import Button from "../components/button.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <Header />
+  <section class="hero dark-section">
+    <div class="hero-content">
+      <h2>
+        <span>Intelligent Solutions.</span>
+        <span>Real Results.</span>
+        <span>Zero Compromise.</span>
+      </h2>
+      <p>
+        We are an agile, expert team specializing in AI/ML, Data Analytics, and
+        End-to-end Web Development, built to move faster and smarter than the
+        competition.
+      </p>
+      <Button
+        btnClasses="btn btn-primary"
+        label="Start Your Project Consultation"
+      />
+    </div>
+    <div class="hero-image">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="72"
+        height="55"
+        viewBox="0 0 72 55"
+        fill="none"
+      >
+        <g clip-path="url(#clip0_1_14)">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M62.6617 6.70834L58.9488 10.1545C53.6457 20.5858 56.9184 32.1471 51.8137 41.6832C48.5984 42.5136 43.4154 43.8959 38.5612 41.2066C35.4903 34.4124 32.4212 27.6183 29.3504 20.8241L25.8915 35.0852L15.9152 32.9215L22.0308 9.91622C26.3091 4.29411 31.861 4.77766 34.5369 5.91995C36.6908 11.1864 38.8448 16.4546 40.9987 21.7211L44.5672 32.0963C48.0556 25.2706 45.2109 13.0575 51.5388 7.7718C57.8858 1.69767 66.345 0.280317 71.9995 0C66.345 4.9003 69.0626 12.404 68.1405 17.8895C67.0479 20.7242 65.6282 24.5681 58.3103 24.6346C60.5617 20.3353 59.3803 12.9191 62.6617 6.70659V6.70834Z"
+            fill="url(#paint0_linear_1_14)"></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M41.1901 42.2876C42.3767 40.4778 43.9739 36.2993 44.6315 31.9702C44.6107 32.0122 44.5898 32.056 44.5672 32.0981L40.9987 21.7228L34.5369 5.92171C31.861 4.77942 26.3091 4.29587 22.0308 9.91799L15.9152 32.9233L25.8915 35.087L29.3504 20.8258L38.5612 41.2084C39.4328 41.6902 40.3132 42.0423 41.1918 42.2894L41.1901 42.2876Z"
+            fill="url(#paint1_linear_1_14)"></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M44.6315 31.9684C43.9738 36.2993 42.3766 40.4778 41.1901 42.2859C45.2091 43.4159 49.1725 42.3647 51.8119 41.6814C56.9167 32.1471 53.644 20.584 58.9471 10.1527L62.6599 6.70659C59.3803 12.9174 60.5617 20.3335 58.3085 24.6346C65.6264 24.5681 67.0461 20.7242 68.1387 17.8895C69.0609 12.4023 66.3432 4.9003 71.9977 0C66.3432 0.280317 57.884 1.69942 51.537 7.7718C45.2474 13.0242 48.019 25.1199 44.6298 31.9684H44.6315Z"
+            fill="url(#paint2_linear_1_14)"></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0.000610352 44.0729C0.000610352 44.0729 7.28192 37.1806 19.661 43.4124C32.0401 49.6442 34.4794 50.3047 36.007 50.8548C45.0978 54.124 55.9406 42.5451 54.4565 43.0918C37.0927 49.4847 32.3028 39.954 22.6988 37.0947C15.8699 35.0607 2.76525 35.6318 0.000610352 44.0729Z"
+            fill="url(#paint3_linear_1_14)"></path>
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M12.15 44.4303L21.6879 47.2159C16.1882 56.1861 1.65171 55.7026 1.32462 54.0242C0.804403 51.3506 12.3953 53.1377 12.1483 44.4303H12.15Z"
+            fill="url(#paint4_linear_1_14)"></path>
+        </g>
+        <defs>
+          <linearGradient
+            id="paint0_linear_1_14"
+            x1="43.9573"
+            y1="0"
+            x2="43.9573"
+            y2="42.7856"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F89449"></stop>
+            <stop offset="0.5" stop-color="#FAB886"></stop>
+            <stop offset="1" stop-color="#F89449"></stop>
+          </linearGradient>
+          <linearGradient
+            id="paint1_linear_1_14"
+            x1="15.9152"
+            y1="23.7411"
+            x2="44.6315"
+            y2="23.7411"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F89449"></stop>
+            <stop offset="0.5" stop-color="#FAB886"></stop>
+            <stop offset="1" stop-color="#F89449"></stop>
+          </linearGradient>
+          <linearGradient
+            id="paint2_linear_1_14"
+            x1="41.1901"
+            y1="21.3917"
+            x2="71.9995"
+            y2="21.3917"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F89449"></stop>
+            <stop offset="0.51" stop-color="#FAB886"></stop>
+            <stop offset="1" stop-color="#F89449"></stop>
+          </linearGradient>
+          <linearGradient
+            id="paint3_linear_1_14"
+            x1="0.000610352"
+            y1="43.775"
+            x2="54.5939"
+            y2="43.775"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F89449"></stop>
+            <stop offset="0.51" stop-color="#FAB886"></stop>
+            <stop offset="1" stop-color="#F89449"></stop>
+          </linearGradient>
+          <linearGradient
+            id="paint4_linear_1_14"
+            x1="1.3107"
+            y1="49.716"
+            x2="21.6897"
+            y2="49.716"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#F89449"></stop>
+            <stop offset="0.509804" stop-color="#FAB886"></stop>
+            <stop offset="1" stop-color="#F89449"></stop>
+          </linearGradient>
+          <clipPath id="clip0_1_14">
+            <rect width="72" height="55" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  </section>
+  <section class="service">
+    <Heading
+      Sub="Our Services"
+      label="Intelligent Solutions for a Digital World."
+    />
+    <div class="service-container">
+      <div class="service-item">
+        <h4>Intelligent Automation & Data</h4>
+        <div class="service-wrapper">
+          <div class="service-content">
+            <div class="service-list">
+              <h5>Artificial Intelligence Development (AI & ML)</h5>
+              <p class="para">
+                Building custom predictive models, natural language processing
+                (NLP) systems, and computer vision applications that automate
+                complex decisions and uncover deeper insights.
+              </p>
+            </div>
+            <div class="service-list">
+              <h5>Data Analytics & Business Intelligence</h5>
+              <p class="para">
+                Transforming fragmented data into cohesive, visual dashboards
+                and reports. We provide the clarity needed for strategic
+                planning and real-time decision-making.
+              </p>
+            </div>
+            <div class="service-list">
+              <h5>Chatbot Development (AI & ML)</h5>
+              <p class="para">
+                Deploying sophisticated, conversational AI agents powered by
+                machine learning for customer service, lead generation, and
+                internal support automation.
+              </p>
+            </div>
+            <div class="service-list">
+              <h5>RPA (Robotic Process Automation)</h5>
+              <p class="para">
+                Implementing software robots to handle high-volume, repetitive
+                business processes, freeing your team for higher-value,
+                strategic work.
+              </p>
+            </div>
+          </div>
+          <div class="service-image"></div>
+        </div>
+      </div>
+      <div class="service-item">
+        <h4>Modern Development & Delivery</h4>
+        <div class="service-wrapper">
+          <div class="service-content">
+            <div class="service-list">
+              <h5>End-to-end Web Development with UX/UI Design</h5>
+              <p class="para">
+                Full-stack application development from concept to launch. We
+                guarantee user-centric design (UX/UI), secure architecture, and
+                optimal performance across all platforms.
+              </p>
+            </div>
+            <div class="service-list">
+              <h5>Mobile App Development</h5>
+              <p class="para">
+                Creating intuitive, high-performance native (iOS/Android) and
+                cross-platform mobile applications designed to maximize
+                engagement and utility.
+              </p>
+            </div>
+            <div class="service-list">
+              <h5>SaaS Products Development</h5>
+              <p class="para">
+                Partnering with you to ideate, build, and scale your proprietary
+                Software-as-a-Service platform. We focus on recurring revenue
+                models and robust cloud architecture.
+              </p>
+            </div>
+          </div>
+          <div class="service-image"></div>
+        </div>
+      </div>
+      <div class="service-item">
+        <h4>Infrastructure & Emerging Tech</h4>
+        <div class="service-wrapper">
+          <div class="service-content">
+            <div class="service-list">
+              <h5>Cloud Deployment</h5>
+              <p class="para">
+                Strategy, migration, and management of scalable cloud
+                environments (AWS, Azure, GCP). Ensure security, cost
+                efficiency, and DevOps best practices from day one.
+              </p>
+            </div>
+            <div class="service-list">
+              <h5>IoT Development</h5>
+              <p class="para">
+                Connecting physical devices and sensors to the cloud. We
+                specialize in secure data ingestion, device management, and
+                building user interfaces for large-scale IoT networks.
+              </p>
+            </div>
+          </div>
+          <div class="service-image"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="idea dark-section">
+    <Heading
+      Sub="Great Methodology"
+      label="Structured, Transparent, Guaranteed."
+    />
+    <div class="idea-wrapper">
+      <div class="idea-content">
+        <AboutCard
+          heading="The Client-Centric Process"
+          content="We follow a lean, iterative Agile methodology for maximum flexibility and transparency."
+        />
+        <AboutCard
+          heading="Our Quality Guarantee"
+          content="We Stand By Our Code. We prioritize clean, well-documented code and comprehensive testing. We offer a 30-day post-launch warranty on all custom development to ensure stability and immediate support."
+        />
+        <AboutCard
+          heading="Technology Stack Confidence"
+          content="Modern Tools for Future-Proof Solutions. We select technology based on performance, scalability, and security. We leverage Python, React/Vue, Node.js, and leading cloud infrastructure to build solutions that will last."
+        />
+      </div>
+      <div class="idea-points">
+        <Chip
+          content="Discovery & Strategy: Define the problem and map the technical solution."
+          heading="Step 1:"
+        />
+        <Chip
+          content="Prototype & Design: Create clickable wireframes and high-fidelity UI/UX."
+          heading="Step 2:"
+        />
+        <Chip
+          content="Development Sprints: Build in short cycles, sharing progress every two weeks."
+          heading="Step 3:"
+        />
+        <Chip
+          content="Quality Assurance & Launch: Rigorous testing and secure, smooth deployment."
+          heading="Step 4:"
+        />
+      </div>
+    </div>
+  </section>
+  <section class="about">
+    <Heading
+      Sub="About Nalivance"
+      label="Driven by Expertise. Defined by Results."
+    />
+    <div class="about-content">
+      <div class="about-wrapper">
+        <div class="about-list">
+          <AboutCard
+            heading="Our Origin Story"
+            content="Founded by a team of technology veterans frustrated by the inefficiency of legacy IT firms. We started with a clear mission: to deliver cutting-edge AI and Data solutions with the speed and personal touch of a highly specialized startup."
+          />
+          <AboutCard
+            heading="The Team"
+            content="While we are a startup, our core leadership brings decades of combined experience from Fortune 500 companies in AI engineering, data science, and enterprise architecture. Your project is managed by experts, not interns."
+          />
+        </div>
+        <div class="about-list">
+          <div class="about-card">
+            <h5>Our Core Values</h5>
+            <p class="para">
+              <span>Transparency:</span> Clear communication and honest feedback
+              at every stage.
+            </p>
+            <p class="para">
+              <span>Innovation:</span> Constantly researching and applying the latest
+              advancements in AI and Cloud.
+            </p>
+            <p class="para">
+              <span>Accountability:</span> We own the outcome and deliver on our
+              promises.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="about-image"></div>
+    </div>
+  </section>
+  <section class="contact dark-section">
+    <Heading
+      Sub="Join The AI Revolution"
+      label="Ready to start your journey with us?"
+    />
+    <Talk />
+    <hr />
+    <SectionHeader label="Nalivance" />
+    <Footer />
+  </section>
 </Layout>
+
+<style lang="scss">
+  @use "../assets/sass/mixin.scss" as *;
+  @use "../assets/sass/variable.scss" as *;
+  @use "../assets/sass/root.scss" as *;
+  @use "../assets/sass/base.scss" as *;
+
+  section {
+    padding: var(--sectionPd);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    @include rel-position;
+
+    &.dark-section {
+      background-color: var(--primaryClr-00);
+      color: var(--primaryClr-l-00);
+    }
+
+    &.hero {
+      @include grid-element;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      place-content: center;
+      .hero-content {
+        @include flex-element;
+        flex-direction: column;
+        gap: 0.75rem;
+        h2 {
+          @include flex-element;
+          flex-direction: column;
+          font-size: 3.5rem;
+          color: var(--primaryClr);
+          // background: var(--text-gradient);
+          // -webkit-background-clip: text;
+          // -webkit-text-fill-color: transparent;
+          // background-clip: text;
+        }
+
+        p {
+          color: var(--primaryClr);
+        }
+      }
+
+      .hero-image {
+        @include grid-element;
+        place-items: center;
+
+        svg {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &.service {
+      .service-container {
+        height: calc(100vh - 7.375rem);
+      }
+      .service-item {
+        height: 100%;
+        padding: var(--sectionPdMob);
+        background-color: var(--primaryClr-l-00);
+        color: var(--primaryClr-500);
+        border-radius: 2rem 2rem 0 0;
+
+        h4 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+        h5 {
+          font-size: 1rem;
+          margin-bottom: 0.25rem;
+        }
+      }
+
+      .para {
+        color: var(--primaryClr-00);
+      }
+    }
+
+    &.idea {
+      --grid-max-item: 3;
+      --grid-gap: 1.5rem;
+      --grid-col-size: calc(
+        (100% - (var(--grid-gap) * (var(--grid-max-item) - 1))) /
+          var(--grid-max-item)
+      );
+
+      .idea-wrapper {
+        @include rel-position;
+        @include grid-element;
+        gap: 3rem;
+      }
+      .idea-content {
+        @include grid-element;
+        gap: var(--grid-gap);
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(max(20rem, var(--grid-col-size)), 1fr)
+        );
+      }
+
+      .idea-points {
+        @include grid-element;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+      }
+
+      &::after {
+        content: "APPROACH";
+        @include left-pos;
+        bottom: 0;
+        font-size: 6rem;
+        line-height: 7.5rem;
+        font-family: var(--fontHdBold);
+        text-transform: uppercase;
+        background: var(--text-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    .about-wrapper {
+      @include flex-element;
+      gap: 1.5rem;
+      align-items: center;
+
+      .about-list {
+        @include grid-element;
+        gap: 1.5rem;
+        width: clamp(20rem, 100%, 26rem);
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    height: 0.125rem;
+    background: var(--hr-gradient);
+    margin: 2rem 0;
+  }
+
+  @media (max-width: 1279px) {
+    section {
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+  }
+  @media (max-width: 750px) {
+    .hero {
+      grid-template-columns: 1fr !important;
+
+      svg {
+        width: 16rem !important;
+      }
+      .hero-content {
+        order: 2;
+      }
+      .hero-image {
+        order: 1;
+      }
+    }
+    .about-wrapper {
+      flex-direction: column;
+    }
+
+    .contact-link {
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    .idea-wrapper {
+      z-index: 2;
+    }
+    .idea-points {
+      grid-template-columns: auto !important;
+    }
+  }
+</style>

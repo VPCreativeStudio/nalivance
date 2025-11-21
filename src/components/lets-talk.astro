@@ -1,0 +1,52 @@
+<div class="contact-container">
+  <div class="contact-text">
+    <h3>Let's Talk</h3>
+    <p>Grab a virtual coffee and talk about your project?</p>
+  </div>
+  <div class="contact-link">
+    <a href="mailto:" target="_blank">
+      <img src="./src/assets/image/arrow.png" alt="arrow" />
+    </a>
+  </div>
+</div>
+
+<style lang="scss">
+  @use "../assets/sass/mixin.scss" as *;
+  @use "../assets/sass/variable.scss" as *;
+  @use "../assets/sass/root.scss" as *;
+  @use "../assets/sass/base.scss" as *;
+
+  .contact-container {
+    @include flex-element;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: var(--primaryClr);
+    color: var(--primaryClr-l-00);
+    border-radius: 2rem;
+    width: 80%;
+    margin: auto;
+
+    h3 {
+      font-size: 2rem;
+      color: var(--primaryClr-l-00);
+      margin-bottom: 1rem;
+    }
+
+    a {
+      img {
+        width: 6rem;
+        height: 6rem;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      img {
+        rotate: -40deg;
+      }
+    }
+  }
+</style>

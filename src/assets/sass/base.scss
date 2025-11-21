@@ -1,0 +1,50 @@
+@use "./mixin.scss" as *;
+@use "./variable.scss" as *;
+@use "./root.scss" as *;
+
+body {
+  margin: 0;
+  background-color: var(--bgClr);
+  color: var(--blackClr);
+  overflow: hidden;
+  overflow-y: auto;
+  font-family: var(--fontRegular);
+  font-size: var(--ft-16);
+  line-height: calc(var(--ft-16) * 1.5);
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  width: 0.25rem;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 0.25rem;
+  background-color: var(--primaryClr);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  width: 0.25rem;
+  background-color: var(--primaryClr);
+}
+
+.icon {
+  @include flex-element;
+  @include transform-origin(center);
+  transition: var(--transition);
+
+  &::before {
+    content: "";
+    @include inline-block-element;
+    transition: var(--transition);
+    width: 3rem;
+    height: 3rem;
+    vertical-align: middle;
+  }
+}

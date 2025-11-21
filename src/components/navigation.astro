@@ -1,0 +1,39 @@
+<nav>
+  <ul role="list">
+    <li role="listitem">
+      <a href="servicepage">Home</a>
+    </li>
+    <li role="listitem">
+      <a href="servicepage">Services</a>
+    </li>
+    <li role="listitem">
+      <a href="servicepage">Approach</a>
+    </li>
+    <li role="listitem">
+      <a href="servicepage">About</a>
+    </li>
+    <li role="listitem">
+      <a href="servicepage">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<style lang="scss">
+  @use "../assets/sass/mixin.scss" as *;
+  @use "../assets/sass/variable.scss" as *;
+  @use "../assets/sass/root.scss" as *;
+  @use "../assets/sass/base.scss" as *;
+
+  nav {
+    @include rel-position;
+
+    ul {
+      @include flex-element;
+      gap: 1rem;
+
+      li {
+        padding: 1rem 0.5rem;
+      }
+    }
+  }
+</style>

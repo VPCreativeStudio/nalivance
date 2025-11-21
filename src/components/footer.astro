@@ -1,0 +1,38 @@
+<footer>
+  <div class="footer">
+    <small>© 2025 Nalivance. All rights reserved.</small>
+    <small
+      >Powered by
+      <a href="vpcreative.com" target="_blank">VP Creative Studio</a>
+    </small>
+  </div>
+  <div class="privacy">
+    <small><a href="#" target="_blank">Privacy Policy</a></small>
+  </div>
+</footer>
+
+<style lang="scss">
+  @use "../assets/sass/mixin.scss" as *;
+  @use "../assets/sass/variable.scss" as *;
+  @use "../assets/sass/root.scss" as *;
+  @use "../assets/sass/base.scss" as *;
+
+  footer {
+    @include flex-element;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    color: var(--primaryClr);
+    font-size: 0.87rem;
+
+    .footer {
+      @include flex-element;
+      gap: 2rem;
+    }
+
+    small {
+      @include flex-element;
+      gap: 0.5rem;
+    }
+  }
+</style>

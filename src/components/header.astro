@@ -1,0 +1,39 @@
+---
+import Button from "../components/button.astro";
+import Logo from "../components/logo.astro";
+import Nav from "../components/navigation.astro";
+---
+
+<header>
+  <div class="head-section">
+    <Logo />
+    <Nav />
+  </div>
+
+  <Button btnClasses="btn btn-primary" label="Set Started" />
+</header>
+
+<style lang="scss">
+  @use "../assets/sass/mixin.scss" as *;
+  @use "../assets/sass/variable.scss" as *;
+  @use "../assets/sass/root.scss" as *;
+  @use "../assets/sass/base.scss" as *;
+
+  header {
+    @include fixed-position;
+    @include flex-element();
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem var(--sectionPd);
+    background-color: var(--primaryClr-00);
+    width: 100vw;
+    top: -10rem;
+    transition: all 0.5s ease-in-out;
+
+    .head-section {
+      @include flex-element;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+</style>

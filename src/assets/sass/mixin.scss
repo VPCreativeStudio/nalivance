@@ -1,0 +1,152 @@
+@use "/src/assets/sass/variable.scss" as *;
+
+// Position
+@mixin rel-position {
+  position: relative;
+}
+
+@mixin abs-position {
+  position: absolute;
+}
+
+@mixin fixed-position {
+  position: fixed;
+}
+
+@mixin sticky-position {
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+// Display
+@mixin block-element {
+  display: block;
+}
+
+@mixin flex-element {
+  display: flex;
+}
+
+@mixin grid-element {
+  display: grid;
+}
+
+@mixin inline-block-element {
+  display: inline-block;
+}
+
+@mixin hide-element {
+  display: none;
+}
+
+@mixin fill-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+@mixin fit-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1rem;
+}
+
+@mixin screen-pd {
+  padding: min(5rem, 8%);
+}
+
+@mixin full-height {
+  height: 100dvh;
+}
+
+@mixin full-image {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+@mixin heading-font {
+  font-size: clamp(2rem, calc(6vw + 1rem), 6rem);
+}
+
+// Others
+@mixin filter($property) {
+  filter: $property;
+  -webkit-filter: $property;
+}
+
+// Transform
+@mixin transform($property) {
+  transform: $property;
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+}
+
+// Transition
+@mixin transition($property) {
+  transition: $property;
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -ms-transition: $property;
+  -o-transition: $property;
+}
+
+// Transition
+@mixin transform-origin($property) {
+  transform-origin: $property;
+  -webkit-transform-origin: $property;
+  -moz-transform-origin: $property;
+  -ms-transform-origin: $property;
+  -o-transform-origin: $property;
+}
+
+// Center of page
+@mixin center-pos {
+  @include abs-position;
+  top: 50%;
+  left: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+@mixin top-pos {
+  @include abs-position;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+@mixin left-center {
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+
+@mixin left-pos {
+  @include abs-position;
+  @include left-center;
+}
+
+// Transition
+@mixin normal-transition {
+  @include transition(all 0.3s);
+}
+
+@mixin mid-transition {
+  @include transition(all 0.5s);
+}
+
+// Icon
+@mixin add-icon($url) {
+  -webkit-mask: url($url);
+  mask: url($url);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  background-color: var(--primaryClr);
+}
+
+@mixin plan-icon {
+  @include add-icon("/images/plan-icon.svg");
+}

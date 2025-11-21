@@ -1,0 +1,57 @@
+---
+interface Props {
+  heading: string;
+  content: String;
+}
+
+const { heading, content } = Astro.props;
+---
+
+<div class="about-card">
+  <h5>{heading}</h5>
+  <p class="para">{content}</p>
+</div>
+
+<style lang="scss" is:global>
+  @use "../assets/sass/mixin.scss" as *;
+  @use "../assets/sass/variable.scss" as *;
+  @use "../assets/sass/root.scss" as *;
+  @use "../assets/sass/base.scss" as *;
+
+  .about-card {
+    background-color: var(--primaryClr-l-00);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: var(--cardBoxShadow);
+    width: clamp(20rem, 100%, 26rem);
+
+    h5 {
+      font-size: 1.25rem !important;
+      margin-bottom: 1rem !important;
+      color: var(--primaryClr-500);
+    }
+
+    .para {
+      font-size: 0.875rem;
+      color: var(--primaryClr-00);
+      margin: 0 !important;
+
+      span {
+        color: var(--primaryClr-500);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .dark-section {
+    .about-card {
+      background-color: var(--primaryClr-100);
+    }
+    h5 {
+      color: var(--primaryClr);
+    }
+    .para {
+      color: var(--primaryClr-l-00);
+    }
+  }
+</style>
