@@ -65,6 +65,7 @@
   --ft-30: 1.875rem;
   --ft-32: 2rem;
   --ft-64: 4rem;
+  --ft-96: 6rem;
 
   --rd-8: 0.5rem;
   --rd-12: 0.75rem;
@@ -100,6 +101,7 @@
 ::after,
 ::before {
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -129,27 +131,27 @@ h6 {
   font-family: var(--font-heading);
 }
 h1 {
-  font-size: 2rem;
+  font-size: var(--ft-96);
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: var(--ft-64);
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: var(--ft-32);
 }
 
 h4 {
-  font-size: 1.125rem;
+  font-size: var(--ft-24);
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: var(--ft-20);
 }
 
 h6 {
-  font-size: 0.875rem;
+  font-size: var(--ft-16);
 }
 p,
 .para {
@@ -237,5 +239,23 @@ textarea {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 50rem) {
+  :root {
+    --sectionPd: 1.5rem;
+    --sectionPdMob: 1rem;
+
+    --ft-12: 0.625rem;
+    --ft-14: 0.75rem;
+    --ft-16: 0.875rem;
+    --ft-18: 1rem;
+    --ft-20: 1.125rem;
+    --ft-24: 1.25rem;
+    --ft-30: 1.75rem;
+    --ft-32: 1.875rem;
+    --ft-64: 2rem;
+    --ft-96: 3rem;
   }
 }

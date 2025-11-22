@@ -13,7 +13,7 @@ import Nav from "../components/navigation.astro";
   <Button btnClasses="btn btn-primary" label="Set Started" />
 </header>
 
-<style lang="scss">
+<style lang="scss" is:global>
   @use "../assets/sass/mixin.scss" as *;
   @use "../assets/sass/variable.scss" as *;
   @use "../assets/sass/root.scss" as *;
@@ -29,11 +29,21 @@ import Nav from "../components/navigation.astro";
     width: 100vw;
     top: -10rem;
     transition: all 0.5s ease-in-out;
+    z-index: -1;
 
     .head-section {
       @include flex-element;
       align-items: center;
       gap: 2rem;
+    }
+
+    &.scrolled {
+      top: 0;
+      z-index: 9;
+    }
+    &.hidden {
+      top: -10rem;
+      z-index: -1;
     }
   }
 </style>

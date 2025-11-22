@@ -28,7 +28,6 @@
     margin: auto;
 
     h3 {
-      font-size: 2rem;
       color: var(--primaryClr-l-00);
       margin-bottom: 1rem;
     }
@@ -46,6 +45,30 @@
 
       img {
         rotate: -40deg;
+      }
+    }
+  }
+
+  @media (max-width: 80rem) {
+    .contact-container {
+      padding: 2rem;
+      a {
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 50rem) {
+    .contact-container {
+      width: 100%;
+      padding: 1rem;
+      a {
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
       }
     }
   }
