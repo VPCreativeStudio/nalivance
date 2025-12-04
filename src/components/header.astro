@@ -24,7 +24,7 @@ import Nav from "../components/navigation.astro";
     @include flex-element();
     justify-content: space-between;
     align-items: center;
-    padding: 1rem var(--sectionPd);
+    padding: 1rem 4rem;
     background-color: var(--primaryClr-00);
     width: 100vw;
     top: -10rem;
@@ -44,6 +44,12 @@ import Nav from "../components/navigation.astro";
     &.hidden {
       top: -10rem;
       z-index: -1;
+    }
+  }
+
+  @media (max-width: 50rem) {
+    header {
+      padding: 0.5rem 2rem;
     }
   }
 </style>

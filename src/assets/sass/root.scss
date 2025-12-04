@@ -75,7 +75,7 @@
   --rd-32: 2rem;
   --rd-64: 4rem;
 
-  --sectionPd: 4rem;
+  --sectionPd: 2rem 4rem;
   --sectionPdMob: 2rem;
 
   --transition: all 0.3s ease;
@@ -244,7 +244,7 @@ textarea {
 
 @media (max-width: 50rem) {
   :root {
-    --sectionPd: 1.5rem;
+    --sectionPd: 1rem 1.75rem;
     --sectionPdMob: 1rem;
 
     --ft-12: 0.625rem;
