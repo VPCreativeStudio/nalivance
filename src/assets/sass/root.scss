@@ -95,6 +95,9 @@
   --font-heading: var(--fontHdBold);
   --font-body: var(--fontRegular);
   --font-title: var(--fontBold);
+
+  --boxShadow-sm: 0 1px 2px var(--primaryClr-200);
+  --boxShadow-lg: 0 2px 4px var(--primaryClr-200);
 }
 
 *,

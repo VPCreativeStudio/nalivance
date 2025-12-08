@@ -32,5 +32,13 @@ const { label, btnClasses } = Astro.props;
     line-height: 1.5;
     border-radius: 5rem;
     width: max-content;
+    box-shadow: var(--boxShadow-sm);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--primaryClr-700);
+      box-shadow: var(--boxShadow-lg);
+      text-decoration: none;
+    }
   }
 </style>
