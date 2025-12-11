@@ -8,7 +8,7 @@ const { label } = Astro.props;
 
 <h1>{label}</h1>
 
-<style lang="scss">
+<style lang="scss" is:global>
   @use "../assets/sass/mixin.scss" as *;
   @use "../assets/sass/variable.scss" as *;
   @use "../assets/sass/root.scss" as *;
@@ -21,5 +21,12 @@ const { label } = Astro.props;
     -webkit-text-fill-color: transparent;
     text-align: center;
     margin: 2rem 0;
+  }
+
+  .idea-wrapper {
+    h1 {
+      font-size: var(--ft-32);
+      margin: 1rem 0;
+    }
   }
 </style>

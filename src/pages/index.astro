@@ -27,7 +27,7 @@ import Button from "../components/button.astro";
           <span>Zero Compromise.</span>
         </h2>
         <p>
-          We are an agile, expert team specializing in AI/ML, Data Analytics,
+          We are an agile, expert team specializing in AI & ML, Data Analytics,
           and End-to-end Web Development, built to move faster and smarter than
           the competition.
         </p>
@@ -133,20 +133,20 @@ import Button from "../components/button.astro";
       />
       <div class="service-container">
         <div class="service-tabs">
-          <div class="service-item item-automation active">
+          <div class="service-item item-automation active" data-tab="1">
             <h5>Intelligent Automation & Data</h5>
           </div>
-          <div class="service-item item-develop">
+          <div class="service-item item-develop" data-tab="2">
             <h5>Modern Development & Delivery</h5>
           </div>
-          <div class="service-item item-tech">
+          <div class="service-item item-tech" data-tab="3">
             <h5>Infrastructure & Emerging Tech</h5>
           </div>
         </div>
 
         <div class="service-wrapper">
-          <div class="service-list list-automation">
-            <div class="service-content active">
+          <div class="service-content-list list-automation active" data-tab="1">
+            <div class="service-content">
               <div class="service-list">
                 <h5>Artificial Intelligence Development (AI & ML)</h5>
                 <p class="para">
@@ -181,7 +181,7 @@ import Button from "../components/button.astro";
               </div>
             </div>
           </div>
-          <div class="service-list list-develop">
+          <div class="service-content-list list-develop" data-tab="2">
             <div class="service-content">
               <div class="service-list">
                 <h5>End-to-end Web Development with UX/UI Design</h5>
@@ -209,7 +209,7 @@ import Button from "../components/button.astro";
               </div>
             </div>
           </div>
-          <div class="service-list list-tech">
+          <div class="service-content-list list-tech" data-tab="3">
             <div class="service-content">
               <div class="service-list">
                 <h5>Cloud Deployment</h5>
@@ -252,6 +252,7 @@ import Button from "../components/button.astro";
             content="Modern Tools for Future-Proof Solutions. We select technology based on performance, scalability, and security. We leverage Python, React/Vue, Node.js, and leading cloud infrastructure to build solutions that will last."
           />
         </div>
+        <SectionHeader label="Approach" />
         <div class="idea-points">
           <Chip
             content="Discovery & Strategy: Define the problem and map the technical solution."
@@ -609,7 +610,7 @@ import Button from "../components/button.astro";
           gap: 1rem;
 
           .service-item {
-            padding: 1rem;
+            padding: 3rem 1.5rem;
             border-radius: 0 1rem 1rem 0;
             background-color: transparent;
             border: 1px solid transparent;
@@ -625,12 +626,16 @@ import Button from "../components/button.astro";
             }
           }
         }
-        .service-content {
+        .service-content-list {
           @include hide-element;
 
           &.active {
             @include block-element;
           }
+        }
+
+        h5 {
+          color: var(--primaryClr-100);
         }
       }
     }
@@ -647,9 +652,9 @@ import Button from "../components/button.astro";
         @include rel-position;
         @include flex-element;
         flex-direction: column;
-        justify-content: space-evenly;
         height: calc(100% - 5rem);
         z-index: 2;
+        gap: 0;
       }
       .idea-content {
         @include grid-element;
@@ -664,20 +669,6 @@ import Button from "../components/button.astro";
         @include grid-element;
         grid-template-columns: 1fr 1fr;
         gap: 1.5rem;
-      }
-
-      &::after {
-        content: "APPROACH";
-        @include left-pos;
-        bottom: 0;
-        font-size: var(--ft-96);
-        line-height: 7.5rem;
-        font-family: var(--fontHdBold);
-        text-transform: uppercase;
-        background: var(--text-gradient);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        z-index: 1;
       }
     }
 
@@ -718,7 +709,32 @@ import Button from "../components/button.astro";
     section {
       width: 100%;
       height: 100%;
-      overflow: auto;
+      overflow: hidden auto;
+
+      &.service {
+        .service-container {
+          grid-template-columns: 1fr;
+
+          .service-tabs {
+            flex-direction: row;
+            gap: 0.5rem;
+
+            .service-item {
+              padding: 0.25rem;
+              border-radius: 0.5rem;
+
+              h5 {
+                font-size: var(--ft-14);
+              }
+            }
+          }
+        }
+      }
+
+      .about-content {
+        gap: 1rem;
+        flex-direction: column;
+      }
     }
     .hero {
       grid-template-columns: 1fr !important;
@@ -796,3 +812,4 @@ import Button from "../components/button.astro";
 </style>
 
 <script src="../assets/js/section.js"></script>
+<script src="../assets/js/action.js"></script>

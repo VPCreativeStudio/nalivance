@@ -9,10 +9,10 @@
     <li class="nav-item" role="listitem">
       <a class="nav-href" href="approach">Approach</a>
     </li>
-    <li class="nav-]tem" role="listitem">
+    <li class="nav-item" role="listitem">
       <a class="nav-href" href="about">About</a>
     </li>
-    <li role="listitem">
+    <li class="nav-item" role="listitem">
       <a class="nav-href" href="contact">Contact</a>
     </li>
   </ul>
@@ -29,10 +29,26 @@
 
     ul {
       @include flex-element;
-      gap: 1rem;
+      gap: 0.5rem;
 
       li {
-        padding: 1rem 0.5rem;
+        a {
+          padding: 0.5rem 0.75rem;
+          background-color: transparent;
+          border: 1px solid transparent;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            background-color: var(--primaryClr-50);
+          }
+        }
+
+        &.selected {
+          a {
+            background-color: var(--primaryClr-50);
+            border-color: var(--primaryClr);
+          }
+        }
       }
     }
   }

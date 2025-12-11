@@ -50,6 +50,12 @@ import Nav from "../components/navigation.astro";
   @media (max-width: 50rem) {
     header {
       padding: 0.5rem 2rem;
+      justify-content: center;
+
+      nav,
+      .btn {
+        @include hide-element;
+      }
     }
   }
 </style>
