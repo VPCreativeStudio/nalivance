@@ -15,20 +15,24 @@ body {
 
 ::-webkit-scrollbar {
   width: 0.25rem;
+  height: 0.25rem;
 }
 
 ::-webkit-scrollbar-track {
   width: 0.25rem;
+  height: 0.25rem;
   background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
   width: 0.25rem;
+  height: 0.25rem;
   background-color: var(--primaryClr);
 }
 
 ::-webkit-scrollbar-thumb:hover {
   width: 0.25rem;
+  height: 0.25rem;
   background-color: var(--primaryClr);
 }
 

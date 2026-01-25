@@ -1,0 +1,116 @@
+---
+interface Props {
+  title: string;
+  category: string;
+  desc: string;
+  service: string;
+  link: string;
+}
+
+const { title, category, desc, service, link } = Astro.props;
+---
+
+<div class="portfolio-card">
+  <div class="portfolio-heading">
+    <h4>{title}</h4>
+    <span><b>Category - </b>{category}</span>
+  </div>
+  <div class="portfolio-desc">
+    <p>{desc}</p>
+  </div>
+  <div class="portfolio-details">
+    <div class="portfolio-service">
+      <span>{service}</span>
+    </div>
+    <div class="portfolio-link">
+      <a href={link} target="_blank">Explore</a>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  @use "../assets/sass/mixin.scss" as *;
+  @use "../assets/sass/variable.scss" as *;
+  @use "../assets/sass/root.scss" as *;
+  @use "../assets/sass/base.scss" as *;
+
+  .portfolio-card {
+    padding: 1rem;
+    border: 1px solid var(--primaryClr-00);
+    background-color: var(--primaryClr-100);
+    border: 1px solid var(--primaryClr-100);
+    border-radius: 1rem;
+
+    .portfolio-service,
+    .portfolio-link {
+      @include flex-element;
+      justify-content: end;
+
+      span {
+        color: var(--primaryClr-l-50);
+        text-transform: uppercase;
+        background-color: var(--primaryClr-50);
+      }
+
+      span,
+      a {
+        font-size: var(--ft-12);
+        padding: 0.25rem 1rem;
+        border-radius: 2rem;
+      }
+
+      a {
+        background-color: var(--primaryClr-l-50);
+        color: var(--primaryClr-00);
+        @include flex-element;
+        gap: 0.25rem;
+        align-items: center;
+
+        &::after {
+          content: "";
+          background: url("../assets/image/arrow-right.svg");
+          transition: all 0.3s ease-in-out;
+          width: 0;
+          height: 1.5rem;
+          overflow: hidden;
+          @include block-element;
+        }
+      }
+    }
+
+    .portfolio-heading {
+      padding: 0.5rem 0;
+
+      h4 {
+        font-size: var(--ft-20);
+        color: var(--primaryClr-500);
+        margin-bottom: 0.25rem;
+      }
+
+      span {
+        font-size: var(--ft-14);
+
+        b {
+          color: var(--primaryClr);
+        }
+      }
+    }
+
+    .portfolio-details {
+      @include flex-element;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &:hover {
+      border-color: var(--primaryClr);
+
+      .portfolio-link {
+        a::after {
+          width: 1.5rem;
+          overflow: auto;
+        }
+      }
+    }
+  }
+</style>

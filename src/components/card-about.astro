@@ -19,11 +19,12 @@ const { heading, content } = Astro.props;
   @use "../assets/sass/base.scss" as *;
 
   .about-card {
-    background-color: var(--primaryClr-l-00);
     padding: 1.5rem;
     border-radius: 1rem;
     box-shadow: var(--cardBoxShadow);
     width: clamp(20rem, 100%, 26rem);
+    background-color: var(--primaryClr-l-150);
+    border: 1px solid var(--primaryClr);
 
     h5 {
       margin-bottom: 1rem !important;
