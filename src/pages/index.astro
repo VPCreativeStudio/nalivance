@@ -237,7 +237,7 @@ import portfolioData from "../assets/js/portfolio.json";
       </div>
     </section>
     <section id="portfolio" class="portfolio dark-section">
-      <Heading Sub="Selected Works." label="Real Solutions. Proven Scale." />
+      <Heading Sub="Portfolio" label="Real Solutions. Proven Scale." />
       <div class="portfolio-wrapper">
         {
           portfolioData.map((portfolio) => (
@@ -245,7 +245,6 @@ import portfolioData from "../assets/js/portfolio.json";
               title={portfolio.title}
               category={portfolio.category}
               desc={portfolio.desc}
-              service={portfolio.service}
               link={portfolio.link}
             />
           ))

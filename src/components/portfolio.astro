@@ -3,11 +3,10 @@ interface Props {
   title: string;
   category: string;
   desc: string;
-  service: string;
   link: string;
 }
 
-const { title, category, desc, service, link } = Astro.props;
+const { title, category, desc, link } = Astro.props;
 ---
 
 <div class="portfolio-card">
@@ -19,9 +18,9 @@ const { title, category, desc, service, link } = Astro.props;
     <p>{desc}</p>
   </div>
   <div class="portfolio-details">
-    <div class="portfolio-service">
+    <!-- <div class="portfolio-service">
       <span>{service}</span>
-    </div>
+    </div> -->
     <div class="portfolio-link">
       <a href={link} target="_blank">Explore</a>
     </div>
@@ -98,7 +97,7 @@ const { title, category, desc, service, link } = Astro.props;
 
     .portfolio-details {
       @include flex-element;
-      justify-content: space-between;
+      justify-content: end;
       align-items: center;
     }
 
