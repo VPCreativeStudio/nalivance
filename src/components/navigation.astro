@@ -7,6 +7,9 @@
       <a class="nav-href" href="services">Services</a>
     </li>
     <li class="nav-item" role="listitem">
+      <a class="nav-href" href="portfolio">Portfolio</a>
+    </li>
+    <li class="nav-item" role="listitem">
       <a class="nav-href" href="approach">Approach</a>
     </li>
     <li class="nav-item" role="listitem">
@@ -37,16 +40,17 @@
           background-color: transparent;
           border: 1px solid transparent;
           transition: all 0.3s ease-in-out;
+          color: var(--whiteClr);
 
           &:hover {
-            background-color: var(--primaryClr-50);
+            border-color: var(--whiteClr);
           }
         }
 
         &.selected {
           a {
-            background-color: var(--primaryClr-50);
-            border-color: var(--primaryClr);
+            background-color: var(--whiteClr);
+            color: var(--primaryDarkestClr);
           }
         }
       }

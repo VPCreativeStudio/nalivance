@@ -35,9 +35,8 @@ const { title, category, desc, link } = Astro.props;
 
   .portfolio-card {
     padding: 1rem;
-    border: 1px solid var(--primaryClr-00);
-    background-color: var(--primaryClr-100);
-    border: 1px solid var(--primaryClr-100);
+    border: 1px solid var(--primaryDarkestClr);
+    background-color: var(--whiteClr);
     border-radius: 1rem;
 
     .portfolio-service,
@@ -46,7 +45,7 @@ const { title, category, desc, link } = Astro.props;
       justify-content: end;
 
       span {
-        color: var(--primaryClr-l-50);
+        color: var(--blackClr);
         text-transform: uppercase;
         background-color: var(--primaryClr-50);
       }
@@ -59,8 +58,8 @@ const { title, category, desc, link } = Astro.props;
       }
 
       a {
-        background-color: var(--primaryClr-l-50);
-        color: var(--primaryClr-00);
+        background-color: var(--brandClr);
+        color: var(--blackClr);
         @include flex-element;
         gap: 0.25rem;
         align-items: center;
@@ -82,16 +81,28 @@ const { title, category, desc, link } = Astro.props;
 
       h4 {
         font-size: var(--ft-20);
-        color: var(--primaryClr-500);
+        color: var(--primaryDarkestClr);
         margin-bottom: 0.25rem;
       }
 
       span {
         font-size: var(--ft-14);
+        color: var(--blackClr);
 
         b {
           color: var(--primaryClr);
         }
+      }
+    }
+
+    .portfolio-desc {
+      color: var(--blackClr);
+
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
       }
     }
 

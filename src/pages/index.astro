@@ -18,11 +18,11 @@ import portfolioData from "../assets/js/portfolio.json";
 <Layout>
   <Header />
   <main>
-    <div class="shade">
+    <!-- <div class="shade">
       <div class="shade-gradient">
         <div class="shade-image"></div>
       </div>
-    </div>
+    </div> -->
     <section id="home" class="hero dark-section">
       <div class="hero-content">
         <h2>
@@ -553,8 +553,8 @@ import portfolioData from "../assets/js/portfolio.json";
     @include rel-position;
 
     &.dark-section {
-      background-color: var(--primaryClr-00);
-      color: var(--primaryClr-l-00);
+      background: var(--sectionGradient);
+      color: var(--whiteClr);
     }
 
     &.hero,
@@ -578,11 +578,11 @@ import portfolioData from "../assets/js/portfolio.json";
         h2 {
           @include flex-element;
           flex-direction: column;
-          color: var(--primaryClr);
+          color: var(--whiteClr);
         }
 
         p {
-          color: var(--primaryClr);
+          color: var(--whiteClr);
         }
 
         span,
@@ -626,11 +626,13 @@ import portfolioData from "../assets/js/portfolio.json";
             cursor: pointer;
 
             &.active {
-              background-color: var(--primaryClr-l-150);
+              background: var(--selectedGradient);
               border: 1px solid var(--primaryClr);
+              color: var(--whiteClr);
             }
             &:hover {
-              background-color: var(--primaryClr-l-100);
+              border-color: var(--primaryClr);
+              box-shadow: var(--boxShadow-sm);
             }
           }
         }
@@ -639,6 +641,10 @@ import portfolioData from "../assets/js/portfolio.json";
 
           &.active {
             @include block-element;
+          }
+
+          h5 {
+            color: var(--primaryDarkestClr);
           }
         }
 
@@ -726,7 +732,7 @@ import portfolioData from "../assets/js/portfolio.json";
   hr {
     border: none;
     height: 0.125rem;
-    background: var(--hr-gradient);
+    background: var(--hrGradient);
     margin: 2rem 0;
   }
 
@@ -811,38 +817,38 @@ import portfolioData from "../assets/js/portfolio.json";
     }
   }
 
-  main {
-    position: relative;
-    .shade {
-      height: 50vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
+  // main {
+  //   position: relative;
+  //   .shade {
+  //     height: 50vh;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     right: 0;
+  //     z-index: 1;
 
-      .shade-gradient {
-        background: radial-gradient(
-          50% 95% at 50% 0%,
-          rgb(248 149 73 / 20%) 0%,
-          rgb(24 11 1 / 50%) 100%
-        );
-        height: 100%;
-        width: 100%;
-        opacity: 1;
-      }
+  //     .shade-gradient {
+  //       background: radial-gradient(
+  //         50% 95% at 50% 0%,
+  //         rgb(248 149 73 / 20%) 0%,
+  //         rgb(24 11 1 / 50%) 100%
+  //       );
+  //       height: 100%;
+  //       width: 100%;
+  //       opacity: 1;
+  //     }
 
-      .shade-image {
-        position: absolute;
-        border-radius: inherit;
-        inset: 0;
-        background-image: url("./src/assets/image/dot.png");
-        background-position: left top;
-        border: 0;
-        background-size: 0.5rem;
-      }
-    }
-  }
+  //     .shade-image {
+  //       position: absolute;
+  //       border-radius: inherit;
+  //       inset: 0;
+  //       background-image: url("./src/assets/image/dot.png");
+  //       background-position: left top;
+  //       border: 0;
+  //       background-size: 0.5rem;
+  //     }
+  //   }
+  // }
 
   .active {
     span,

@@ -23,21 +23,21 @@ const { heading, content } = Astro.props;
     border-radius: 1rem;
     box-shadow: var(--cardBoxShadow);
     width: clamp(20rem, 100%, 26rem);
-    background-color: var(--primaryClr-l-150);
+    background: var(--cardGradient);
     border: 1px solid var(--primaryClr);
 
     h5 {
       margin-bottom: 1rem !important;
-      color: var(--primaryClr-500);
+      color: var(--whiteClr);
     }
 
     .para {
       font-size: 0.875rem;
-      color: var(--primaryClr-00);
+      color: var(--whiteClr);
       margin: 0 !important;
 
       span {
-        color: var(--primaryClr-500);
+        color: var(--whiteClr);
         font-weight: 600;
       }
     }
@@ -45,13 +45,13 @@ const { heading, content } = Astro.props;
 
   .dark-section {
     .about-card {
-      background-color: var(--primaryClr-100);
+      background: var(--whiteClr);
     }
     h5 {
       color: var(--primaryClr);
     }
     .para {
-      color: var(--primaryClr-l-00);
+      color: var(--blackClr);
     }
   }
 </style>
