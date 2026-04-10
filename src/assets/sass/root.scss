@@ -80,11 +80,17 @@
   --fontRegular: regularFont, sans-serif;
   --fontLight: lightFont, sans-serif;
 
-  --fontHdRegular: headRegularFont, sans-serif;
-  --fontHdMedium: headMediumFont, sans-serif;
-  --fontHdSemi: headSemiFont, sans-serif;
-  --fontHdBold: headBoldFont, sans-serif;
-  --fontHdBlack: headBlakFont, sans-serif;
+  --fontHdRegular: regularFont, sans-serif;
+  --fontHdMedium: mediumFont, sans-serif;
+  --fontHdSemi: mediumFont, sans-serif;
+  --fontHdBold: primaryFont, sans-serif;
+  --fontHdBlack: primaryFont, sans-serif;
+
+  // --fontHdRegular: headRegularFont, sans-serif;
+  // --fontHdMedium: headMediumFont, sans-serif;
+  // --fontHdSemi: headSemiFont, sans-serif;
+  // --fontHdBold: headBoldFont, sans-serif;
+  // --fontHdBlack: headBlakFont, sans-serif;
 
   --font-heading: var(--fontHdBold);
   --font-body: var(--fontRegular);

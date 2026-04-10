@@ -18,17 +18,12 @@ import portfolioData from "../assets/js/portfolio.json";
 <Layout>
   <Header />
   <main>
-    <!-- <div class="shade">
-      <div class="shade-gradient">
-        <div class="shade-image"></div>
-      </div>
-    </div> -->
     <section id="home" class="hero dark-section">
       <div class="hero-content">
         <h2>
-          <span>Intelligent Solutions.</span>
-          <span>Real Results.</span>
-          <span>Zero Compromise.</span>
+          <span>Intelligent Solutions</span>
+          <span>Real Results</span>
+          <span>Zero Compromise</span>
         </h2>
         <p>
           We are an agile, expert team specializing in AI & ML, Data Analytics,
@@ -566,6 +561,13 @@ import portfolioData from "../assets/js/portfolio.json";
       }
     }
 
+    &.contact {
+      background: url("./src/assets/image/map.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
     &.hero {
       @include grid-element;
       grid-template-columns: 1fr 1fr;
@@ -816,39 +818,6 @@ import portfolioData from "../assets/js/portfolio.json";
       grid-template-columns: auto !important;
     }
   }
-
-  // main {
-  //   position: relative;
-  //   .shade {
-  //     height: 50vh;
-  //     position: absolute;
-  //     top: 0;
-  //     left: 0;
-  //     right: 0;
-  //     z-index: 1;
-
-  //     .shade-gradient {
-  //       background: radial-gradient(
-  //         50% 95% at 50% 0%,
-  //         rgb(248 149 73 / 20%) 0%,
-  //         rgb(24 11 1 / 50%) 100%
-  //       );
-  //       height: 100%;
-  //       width: 100%;
-  //       opacity: 1;
-  //     }
-
-  //     .shade-image {
-  //       position: absolute;
-  //       border-radius: inherit;
-  //       inset: 0;
-  //       background-image: url("./src/assets/image/dot.png");
-  //       background-position: left top;
-  //       border: 0;
-  //       background-size: 0.5rem;
-  //     }
-  //   }
-  // }
 
   .active {
     span,
